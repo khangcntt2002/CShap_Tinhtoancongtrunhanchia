@@ -11,18 +11,38 @@
         Console.Write("nhập số 2: ");
         so2 = Convert.ToInt32(Console.ReadLine());
 
-        tong = so1 + so2;
+     
 
-        Console.WriteLine("Tổng của 2 số " + so1 + "và" + so2 + "là:" + tong);
-        double thuong;
+        Console.WriteLine("Tổng của 2 số " + so1 + "và" + so2 + "là:" + tinhtong(so1,so2));
+        Console.WriteLine("hiệu của 2 số " + so1 + "và" + so2 + "là:" + tinhhieu(so1, so2));
+        Console.WriteLine("tích của 2 số " + so1 + "và" + so2 + "là:" + tinhtich(so1, so2));
+
+
         try
         {
-            thuong = so1 / so2;
-            Console.WriteLine("thương của 2 số " + so1 + "và" + so2 + " là:" + thuong);
+          
+            Console.WriteLine("thương của 2 số " + so1 + "và" + so2 + " là:" + tinhthuong(so1,so2));
         }
         catch
         {
             Console.WriteLine("chẳng thể nào chia được cho không");
         }
+        
     }
+    private static int tinhtong(int a, int b)
+    {
+        return a + b;
+    }
+    private static int tinhhieu(int a, int b)
+    {
+        return a - b;
+    }
+    private static int tinhthuong(int a, int b)
+    { 
+         return a / b; 
+    }
+
+    private static int tinhtich(int a, int b)
+    { return a * b; }
 }
+
